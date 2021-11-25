@@ -3,4 +3,48 @@
 
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1/-1;
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    margin-top: 2rem;
+    height: 4rem;
+    width: 4.5rem;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+
+  background-color: #fff;
+  height: 0.2rem;
+  width: 4.5rem;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    background-color: #fff;
+    height: 0.2rem;
+    width: 4.5rem;
+    display: block;
+  }
+  &::before {
+    top: -1rem;
+  }
+
+  &::after {
+    bottom: -1rem;
+  }
 }
